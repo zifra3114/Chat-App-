@@ -1,0 +1,169 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #0a0015, #0c0013, #250037);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  text-align: center;
+  background: rgba(30, 0, 47, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0 30px hotpink, 0 0 60px purple;
+  max-width: 400px;
+  width: 70%;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== HEADING ===== */
+.container h1 {
+  font-size: 32px;
+  color: #ffb3ff;
+  text-shadow: 0 0 10px hotpink, 0 0 20px purple;
+  margin-bottom: 30px;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* ===== INPUT FIELD ===== */
+input[type="text"] {
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #2a2a3d;
+  color: white;
+  box-shadow: inset 0 0 10px #ff69b4;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 15px 10px #f6416c;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 12px 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(180,10,95), rgb(51,1,51));
+  box-shadow: 0 0 15px hotpink, 0 0 30px purple;
+  transition: 0.3s ease;
+  width: 300px;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px hotpink, 0 0 50px purple;
+}
+
+/* ===== FOOTER TEXT ===== */
+.container p {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #ffb3ff;
+  text-shadow: 0 0 5px hotpink;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px hotpink, 0 0 20px purple; }
+  50% { text-shadow: 0 0 20px hotpink, 0 0 30px purple; }
+  100% { text-shadow: 0 0 10px hotpink, 0 0 20px purple; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===========================
+   🌈 RESPONSIVE DESIGN
+   =========================== */
+
+/* Tablets & smaller laptops */
+@media (max-width: 1024px) {
+  .container {
+    width: 80%;
+    padding: 35px 25px;
+  }
+  .container h1 {
+    font-size: 28px;
+  }
+  button {
+    width: 250px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile (landscape & portrait) */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+    box-shadow: 0 0 25px hotpink, 0 0 40px purple;
+  }
+  .container h1 {
+    font-size: 26px;
+  }
+  input[type="text"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+  button {
+    width: 220px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .container p {
+    font-size: 13px;
+  }
+}
+
+/* Extra small devices (phones <480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    border-radius: 0;
+    padding: 25px 15px;
+    box-shadow: none;
+  }
+  .container h1 {
+    font-size: 22px;
+  }
+  input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+  button {
+    width: 180px;
+    font-size: 13px;
+  }
+  .container p {
+    font-size: 12px;
+  }
+}

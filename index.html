@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zifra Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="heading">
+      <h1>💬 ZIFRA FIRDOUS</h1>
+      </div>
+      <div class="btn">
+         <button id="themeToggle" class="theme-toggle">🌙</button>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main-container">
+      <div class="left-container">
+        <h1>Chat App</h1>
+        <p>⚡ Connect • 💬 Chat • 🤝 Share — all in one place!</p>
+
+        <div class="features">
+          <p>🌍 Real-time Messaging</p>
+          <p>🔒 Secure & Private Chats</p>
+          <p>🎨 Beautiful Interface</p>
+        </div>
+
+        <div class="buttons">
+          <button class="signup-btn">Sign Up</button>
+          <button class="login-btn">Login</button>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="img-wrapper">
+          <img src="./img.avif" alt="Phone chat image" class="main-img">
+          <img src="./img2-removebg-preview.png" alt="Chat bubble" class="overlay-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGN UP POPUP -->
+  <div class="popup-overlay" id="signupPopup">
+    <div class="popup">
+      <h2>Sign Up🚀</h2>
+      <input type="email" id="signup-email" placeholder="Enter Your Email" required>
+      <input type="password" id="signup-password" placeholder="Enter Your Password" required>
+      <p>📧 Use any email & 🔒 password (min 6 chars). Choose your ✨ username after signup!</p>
+      <button id="sign-btn-popup" onclick="closePopup('signupPopup')">Sign Up</button>
+    </div>
+  </div>
+
+
+  <div class="popup-overlay" id="loginPopup">
+    <div class="popup">
+      <h2>Login✨</h2>
+      <input type="email" id="login-email" placeholder="Enter Your Email" required>
+      <input type="password" id="login-password" placeholder="Enter Your Password" required>
+      <p>📧 Use your email & password to Log in 💬</p>
+      <button id="login-btn-popup" onclick="closePopup('loginPopup')">Login</button>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script type="module" src="./app.js"></script>
+</body>
+</html>
